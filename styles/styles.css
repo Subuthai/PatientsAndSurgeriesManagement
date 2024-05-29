@@ -1,0 +1,277 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.search-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.search-container h1 {
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+button[type="submit"], .button {
+    background-color: #555555;
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    max-width: 200px;
+}
+
+button[type="submit"]:hover, .button:hover {
+    background-color: #333333;
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.button-container .button {
+    background-color: #999999;
+    margin: 10px;
+    flex: 1 0 45%;
+}
+
+.button-container .button:hover {
+    background-color: #777777;
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 300px;
+    }
+
+    .button-container .button {
+        flex: 1 0 100%;
+    }
+}
+
+/* hasta detayları */
+
+.details-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.patient-heading {
+    margin-top: 0;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.patient-details {
+    margin-bottom: 20px;
+}
+
+.control-table-heading {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.control-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.control-table th, .control-table td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.control-table th {
+    background-color: #f0f0f0;
+}
+
+.control-table td {
+    background-color: #fff;
+}
+
+.control-table a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.control-table a:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    color: #dc3545;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .control-table th, .control-table td {
+        padding: 6px;
+    }
+}
+
+/* tüm hastaları listeleme */
+
+.allpatients-container {
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.allpatients-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.results-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.results-table th,
+.results-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.results-table th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+    color: #333333;
+}
+
+.results-table td {
+    background-color: #ffffff;
+    color: #555555;
+}
+
+.results-table td a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.results-table td a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+.pagination {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination a {
+    color: #555555;
+    padding: 8px 16px;
+    text-decoration: none;
+    border: 1px solid #dddddd;
+    margin: 0 4px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination a.active,
+.pagination a:hover {
+    background-color: #555555;
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .allpatients-container {
+        padding: 10px;
+    }
+
+    .results-table th,
+    .results-table td {
+        padding: 10px 8px;
+    }
+
+    .pagination {
+        margin-top: 10px;
+    }
+
+    .pagination a {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+}
+
+/* diğer */
+
+    @media (max-width: 768px) {
+    .edit-container {
+        padding: 10px;
+        border-radius: 0;
+        box-shadow: none;
+        }
+    }
+    
+    .addpatient-container {
+        max-width: 600px;
+        margin: 20px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
